@@ -1,0 +1,197 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.heading {
+    margin-bottom: 20px;
+}
+
+.heading h1 {
+    font-size: 36px;
+    color: #333;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.profile-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+    padding: 30px 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: scale(1.05);
+}
+
+.upper-design .circle {
+    position: absolute;
+    top: -90px;
+    left: -70px;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.upper-design .triangle {
+    position: absolute;
+    top: 50px;
+    right: -90px;
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 100px solid #2575fc;
+    transition: 0.5s;
+}
+
+.upper-design .rectangle {
+    position: absolute;
+    bottom: -10px;
+    left: 38%;
+    transform: translateX(0%);
+    width: 100px;
+    height: 15px;
+    background: #6a11cb;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.profile-card:hover .circle {
+    top: -100px;
+    left: -100px;
+}
+
+.profile-card:hover .triangle {
+    right: -90px;
+    transform: rotate(15deg);
+}
+
+.profile-card:hover .rectangle {
+    bottom: 35px;
+    transform: scale(3);
+    opacity: 0.2;
+}
+
+.profile-card img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 5px solid #fff;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card h2 {
+    font-size: 26px;
+    margin: 10px 0;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.profile-card p {
+    color: #777;
+    font-size: 16px;
+    margin: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.social-icons {
+    margin-top: 20px;
+    position: relative;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #777;
+    font-size: 24px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #2575fc;
+    transform: translateY(-5px);
+}
+
+.social-icons a i {
+    color: inherit;
+}
+
+
+
+@media (max-width: 768px) {
+    .profile-card {
+        padding: 28px;
+        max-width: 300px;
+    }
+
+    .upper-design .circle {
+        width: 200px;
+        height: 200px;
+    }
+
+    .upper-design .triangle {
+        border-left: 80px solid transparent;
+        border-right: 80px solid transparent;
+        border-bottom: 80px solid #2575fc;
+    }
+
+    .profile-card h2 {
+        font-size: 24px;
+    }
+
+    .profile-card p {
+        font-size: 16px;
+    }
+
+    .social-icons a {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-card {
+        padding: 28px;
+        max-width: 280px;
+    }
+
+    .upper-design .circle {
+        width: 150px;
+        height: 150px;
+    }
+
+    .upper-design .triangle {
+        border-left: 90px solid transparent;
+        border-right: 90px solid transparent;
+        border-bottom: 90px solid #2575fc;
+    }
+
+    .profile-card h2 {
+        font-size: 20px;
+    }
+
+    .profile-card p {
+        font-size: 14px;
+    }
+
+    .social-icons a {
+        font-size: 20px;
+    }
+}
